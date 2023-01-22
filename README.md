@@ -27,7 +27,7 @@
 | describe           | text       | null: false                    |
 | category_id        | integer    | null: false                    |
 | condition_id       | integer    | null: false                    |
-| delivaly_charge_id | integer    | null: false                    |
+| delivery_charge_id | integer    | null: false                    |
 | prefecture_id      | integer    | null: false                    |
 | days_to_ship_id    | integer    | null: false                    |
 | price              | integer    | null: false                    |
