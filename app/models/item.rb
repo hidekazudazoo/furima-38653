@@ -11,11 +11,11 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :item_name
     validates :describe
-    validates :category,        numericality: { other_than: 0, message: "can't be blank" }
-    validates :condition,       numericality: { other_than: 0 }
-    validates :delivery_charge, numericality: { other_than: 0 }
-    validates :prefecture,      numericality: { other_than: 0 }
-    validates :days_to_ship,    numericality: { other_than: 0 }
-    validates :price,           numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }  300-9,999,999
+    validates :category_id,        numericality: { other_than: 0, message: "can't be blank" }
+    validates :condition_id,       numericality: { other_than: 0 }
+    validates :delivery_charge_id, numericality: { other_than: 0 }
+    validates :prefecture_id,      numericality: { other_than: 0 }
+    validates :days_to_ship_id,    numericality: { other_than: 0 }
+    validates :price,              numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
   end
 end
