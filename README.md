@@ -50,10 +50,10 @@
 
 - belongs_to :item
 - belongs_to :user
-- has_one :address
+- has_one :order
 
 
-## addresses テーブル
+## orders テーブル
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | postal_code   | string     | null: false                    |
