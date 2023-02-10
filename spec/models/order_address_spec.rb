@@ -27,7 +27,7 @@ RSpec.describe OrderAddress, type: :model do
       it '郵便番号は「3桁ハイフン4桁」の半角文字列でないと登録できない' do
         @order_address.postal_code = '1110000'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Postal code 例）123-4567")
+        expect(@order_address.errors.full_messages).to include('Postal code 例）123-4567')
       end
       it '都道府県が選択されていないと登録できない' do
         @order_address.prefecture_id = '0'
@@ -52,17 +52,17 @@ RSpec.describe OrderAddress, type: :model do
       it '電話番号は半角数値以外では登録できない' do
         @order_address.phone_number = 'hogehogeho'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number is invalid")
+        expect(@order_address.errors.full_messages).to include('Phone number is invalid')
       end
       it '電話番号は10桁以上の半角数値でないと登録できない' do
         @order_address.phone_number = '000111222'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number is too short (minimum is 10 characters)")
+        expect(@order_address.errors.full_messages).to include('Phone number is too short (minimum is 10 characters)')
       end
       it '電話番号は11桁以内の半角数値でないと登録できない' do
         @order_address.phone_number = '000011112222'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number is too long (maximum is 11 characters)")
+        expect(@order_address.errors.full_messages).to include('Phone number is too long (maximum is 11 characters)')
       end
       it 'tokenが空では登録できない' do
         @order_address.token = nil
