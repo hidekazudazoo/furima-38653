@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_many :records
+- has_many :order
 
 
 ## items テーブル
@@ -36,10 +36,10 @@
 ### Association
 
 - belongs_to :user
-- has_one :record
+- has_one :order
 
 
-## records テーブル
+## orders テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -65,4 +65,4 @@
 | record        | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :record
+- belongs_to :order
